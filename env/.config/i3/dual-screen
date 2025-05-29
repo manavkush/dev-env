@@ -1,0 +1,13 @@
+#!/bin/sh
+
+xrandr | grep -q "HDMI-1-1 connected"
+ST=$?
+
+if [ $ST -eq 0 ]; then
+    xrandr --output eDP --mode 1920x1080 --output HDMI-1-1 --mode 2560x1440 --primary --left-of eDP
+else
+    xrandr --output eDP --mode 1920x1080 --primary
+fi
+
+# Send first 4 workspaces to primary output
+i3-msg '[workspace="^(1|2|3|4)"] exec send_to_primary;'
