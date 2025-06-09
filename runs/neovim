@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-git clone -b v0.11.1 https://github.com/neovim/neovim.git $HOME/personal/neovim
 sudo dnf -y install ninja-build cmake gcc make unzip gettext curl
+git clone https://github.com/neovim/neovim.git $HOME/personal/neovim
+pushd $HOME/personal/neovim
+git checkout stable
 
-cd $HOME/personal/neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
+make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
+popd

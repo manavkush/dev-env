@@ -60,4 +60,5 @@ copy_file() {
 copy_dir env/.config $XDG_CONFIG_HOME
 copy_dir env/.local $HOME/.local
 
-copy_file $DEV_ENV/env/.zprofile $HOME/.zprofile
+copy_file env/.zprofile $HOME/.zprofile
+copy_file env/.zshrc $HOME/.zshrc
