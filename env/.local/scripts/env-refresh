@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 (
-cd $HOME/dev/dev-env/
+pushd $HOME/dev/dev-env/
 ./dev-env
 hash -r
+popd
 )
