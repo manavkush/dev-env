@@ -222,8 +222,9 @@ bindsym Ctrl+$mod+Print exec --no-startup-id maim --format=png --window $(xdotoo
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --format=png --select | xclip -selection clipboard -t image/png
 
 exec_always --no-startup-id xset r rate 250
-exec --no-startup-id setxkbmap -option ctrl:swapcaps
-exec --no-startup-id ~/.screenlayout/layout.sh
+exec_always --no-startup-id setxkbmap -option ctrl:swapcaps
+exec_always --no-startup-id setxkbmap -option altwin:swap_ralt_rwin
+# exec_always --no-startup-id ~/.screenlayout/layout.sh
 exec_always --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 exec_always ~/.config/polybar/launch.sh &
 

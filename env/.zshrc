@@ -139,7 +139,7 @@ function y() {
 }
 
 export EDITOR=nvim
-export XDG_CONFIG_HOME=/home/manav/.config
+export XDG_CONFIG_HOME=$HOME/.config
 
 alias dev-env="$DEV_ENV/dev-env"
 
