@@ -16,6 +16,7 @@ addToPathFront() {
 }
 
 addToPath $HOME/.local/bin
+addToPath $HOME/.local/scripts
 addToPath /usr/local/go/bin
 
 alias vi=nvim
