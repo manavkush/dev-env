@@ -80,6 +80,7 @@ ZSH_THEME="eastwood"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.zshprofile
 
 # User configuration
 
