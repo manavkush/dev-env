@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 (
-pushd $HOME/dev/dev-env/
+pushd $HOME/personal/dev-env/
 ./dev-env
 hash -r
 popd

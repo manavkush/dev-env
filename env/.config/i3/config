@@ -224,8 +224,12 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --format=png --select | xclip
 exec_always --no-startup-id xset r rate 250
 exec_always --no-startup-id setxkbmap -option ctrl:swapcaps
 exec_always --no-startup-id setxkbmap -option altwin:swap_ralt_rwin
-# exec_always --no-startup-id ~/.screenlayout/layout.sh
+exec_always --no-startup-id ~/.screenlayout/layout.sh
 exec_always --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
+
+# Set GTK theme
+exec --no-startup-id gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+exec --no-startup-id gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 exec_always ~/.config/polybar/launch.sh &
 
 exec_always feh --bg-fill ~/Pictures/bg.jpg
