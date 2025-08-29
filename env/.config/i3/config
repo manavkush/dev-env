@@ -222,8 +222,8 @@ bindsym Ctrl+$mod+Print exec --no-startup-id maim --format=png --window $(xdotoo
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --format=png --select | xclip -selection clipboard -t image/png
 
 exec_always --no-startup-id xset r rate 250
-exec_always --no-startup-id setxkbmap -option ctrl:swapcaps
-exec_always --no-startup-id setxkbmap -option altwin:swap_ralt_rwin
+exec_always setxkbmap -option ctrl:swapcaps
+exec_always setxkbmap -option altwin:swap_ralt_rwin
 exec_always --no-startup-id ~/.screenlayout/layout.sh
 exec_always --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 
@@ -237,5 +237,9 @@ exec_always feh --bg-fill ~/Pictures/bg.jpg
 default_border pixel 0
 default_floating_border pixel 0
 
-# exec_always "/home/manavkush/.Xmodmap"
-# exec --no-startup-id setxkbmap -option altwin:swap_ralt_rwin
+# Keybinds
+# Spotify
+bindsym $mod+m exec --no-startup-id ~/.config/i3/focus_or_launch.sh "Spotify" "spotify"
+# Zen Browser
+bindsym $mod+b exec --no-startup-id ~/.config/i3/focus_or_launch.sh "zen" "zen"
+
