@@ -1,0 +1,4 @@
+setxkbmap -option ctrl:swapcaps
+setxkbmap -option altwin:swap_ralt_rwin
+xset r rate 250
+
